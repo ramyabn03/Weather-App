@@ -40,3 +40,12 @@ To use the app, simply enter the name of a city in the input feild and press ent
 
 #### OpenWeather API - The weather data source
 
+
+## Deployment Status
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b07eb0aa-22c4-4b65-8d1d-80ce2f7be751/deploy-status)](https://app.netlify.com/sites/ramyabn-weatherapp/deploys)
+
+## Demo
+
+Insert gif or link to demo
+
+https://ramyabn-weatherapp.netlify.app/
