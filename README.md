@@ -8,12 +8,14 @@ Prerequisites You'll need Node.js installed on your machine to run this app. You
 ## Installing
 
 1. Clone this repository to your local machine: 
+
 Copy code: 
 ```
 git clone https://github.com/ramyabn03/Weather-App.git
 ```
 
 2. Install the required dependencies: 
+
 Copy code: 
 
 ```cd Weather-App ```
@@ -23,6 +25,7 @@ Copy code:
 ``` npm install ```
 
 3. Start the development server: 
+
 Copy code:
 
 ``` npm start```
