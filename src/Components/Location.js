@@ -18,7 +18,7 @@ function Location() {
     setCity(currentCity);
     setCurrentCity("");
   }
-  useOnKeyEnter(submitHandler, "Enter");
+  useOnKeyEnter(submitHandler, "Enter"); //CUSTOM HOOK TO GET INPUT VALUE i.e. CITY NAME ON PRESSING ENTER KEY
 
   // const getDeviceLocation = async () => {
   //   setLoading(true);
@@ -34,6 +34,8 @@ function Location() {
   //       setLoading(false);
   //     });
   // };
+
+  //TO GET DEVICE LOCATION USING GEOLOCATION
   const getDeviceLocation = () => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, showError);
@@ -45,6 +47,8 @@ function Location() {
   const showPosition = (position) => {
     let lat = position.coords.latitude;
     let long = position.coords.longitude;
+
+    //TO GET CITY NAME FROM LATITUDE AND LONGITUDE
     const geoApiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${long}&localitylanguage=en`;
     setLoading(true);
     fetch(geoApiUrl)
@@ -59,6 +63,7 @@ function Location() {
       });
   };
 
+  //TO HANDLE ERROR WHILE GETTING DEVICE LOCATION(LATITUDE & LONGITUDE)
   const showError = (error) => {
     switch (error.code) {
       case error.PERMISSION_DENIED:
@@ -82,6 +87,7 @@ function Location() {
     }
   };
 
+  //TO GET THE WEATHER INFORMATION USING OPENWEATHERMAP API
   useEffect(() => {
     if (city !== "") {
       setIsError(false);

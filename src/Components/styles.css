@@ -80,7 +80,13 @@ button {
   border-radius: 5px;
   color: #ffffff;
   font-size: 1.6rem;
+  font-weight: 500;
   cursor: pointer;
+}
+button:hover {
+  border: 2px solid #3eafdc;
+  background-color: #ffffff;
+  color: #3eafdc;
 }
 
 .weather-details {
@@ -135,4 +141,17 @@ button {
   font-size: 1.2rem;
   font-weight: 500;
   color: red;
+}
+
+/***** Responsiveness (Media queries) ******/
+
+@media (max-width: 340px) {
+  .app-container {
+    width: 28rem;
+  }
+}
+@media (max-width: 290px) {
+  .app-container {
+    width: 23rem;
+  }
 }
